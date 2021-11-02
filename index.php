@@ -83,7 +83,7 @@ $phrase = 'J\'écris';
 
 // Echo ne fonctionne pas sur des données composées comme les tableaux. J'ai une erreur si je l'utilise.
 echo $fruits;
-
+echo '<br>';
 print_r($fruits);
 
 // Je peux faire plein de trucs avec les tableaux, la documentation php me dit tout : https://www.php.net/manual/fr/book.array.php
@@ -153,4 +153,46 @@ $numbreDeux = 12;
 echo '<br>';
 
 echo $numbreUn+$numbreDeux;
+echo '<br>';
+
+/* 
+PHP nous offre des raccourcies pour modifier une variable. 
+Par exemple, on va vouloir incrémenter une variable, c'est-à-dire augmenter sa valeur de 1
+*/
+
+// J'ai des sous à la banque
+
+$economies = 2000 ;
+
+// Tous les jours, je rajoute un euro dans économies;
+$economies++;
+
+var_dump($economies);
+
+// Je soustrais 1 euros à mes economies
+
+$economies--;
+
+var_dump($economies);
+echo '<br>';
+
+/* 
+Les opérateurs combinés 
+Ok on a vu comment soustraire ou rajouter 1, mais comment je fais si je veux rajouter ou soustraire plus de 1, par exemple 3
+*/
+$loyer = 600;
+$salaire = 1500;
+
+// Ce mois-ci je décide d'économiser tout mon salaire
+
+$economies+=$salaire;
+
+var_dump($economies);
+
+// Maintenant je dois payer mon loyer via mes économies
+
+$economies-=$loyer;
+
+var_dump($economies);
+
 ?>
