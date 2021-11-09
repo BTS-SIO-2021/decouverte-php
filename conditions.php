@@ -217,14 +217,50 @@ $fruits = [
     'violet'=>'citrons'
 ];
 
+// Ici on stocke la valeur de chaque élément du tableau $fruits dans la variable $fruit
 foreach ($fruits as $fruit){
     echo $fruit ; 
     echo '<br>';
 };
 
+// Ici on stocke la valeur de chaque élément du tableau $fruits dans la variable $fruit et l'index ou clé de chaque élément du tableau dans $index
 foreach ($fruits as $index => $fruit){
     echo "le ".$fruit."c'est ".$index;
     echo '<br>';
 }
+
+/* Pour définir une fonction en php, j'utilise le mot-clé function suivi du nom que je donne à ma fonction et ensuite je déclare ma fonction. 
+function NOM DE MA FONCTION() DECLA de la fonction 
+*/
+// ICI je déclare ma fonction
+function DisplayHello(){
+    echo 'Hello Je suis une fonction';
+}
+
+// ICI j'utilise ma fonction
+DisplayHello();
+
+function CalculSurface($longueur, $largeur){
+    return $longueur*$largeur;
+}
+
+$calcul = CalculSurface(2, 5);
+var_dump($calcul);
+
+function CalculPerimetre($longueur, $largeur){
+    $perimetre = 2 * ($longueur+$largeur);
+    return $perimetre;
+}
+
+$calculPerimetre = CalculPerimetre(5, 10);
+var_dump($calculPerimetre);
+
+function FaisDuCafe(string $water, string $coffeeSeeds){
+    return "Une tasse ".$water." avec ".$coffeeSeeds;
+}
+
+$tasseCafe = FaisDuCafe('eau', 'arabica');
+
+var_dump($tasseCafe);
 
 ?>
